@@ -1,0 +1,8 @@
+.cards {
+  background: linear-gradient(
+    90deg,
+    rgb(131, 118, 247) 0%,
+    rgb(38, 38, 39) 100%
+  );
+  padding: 5rem;
+}

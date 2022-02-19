@@ -1,21 +1,16 @@
 import './App.css';
+import BigImageBackGround from './assets/LocationImage.jpg'
 
-import { Link } from "react-router-dom";
-
+import NavBar from "./components/NavBar/NavBar"
 export default function App() {
   return (
     <div>
-      <h1>Location App</h1>
-      <p>By - Juan G. Gómez</p>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem"
-        }}
-      >
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
-      </nav>
+      <NavBar></NavBar>
+      <div className='content'>
+        <h1>Location App</h1>
+        <p>By - Juan G. Gómez</p>
+        <img src={BigImageBackGround} alt='Big Image Background' className='principal-image'></img>
+      </div>
     </div>
   );
 }
