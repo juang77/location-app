@@ -9,7 +9,7 @@ export default function App() {
       <div className='content'>
         <h1>Location App</h1>
         <p>By - Juan G. Gómez</p>
-        <img src={BigImageBackGround} alt='Big Image Background' className='principal-image'></img>
+        <img src={BigImageBackGround} alt='Big Background' className='principal-image'></img>
       </div>
     </div>
   );

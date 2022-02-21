@@ -44,3 +44,11 @@
     transform: rotate(360deg);
   }
 }
+
+.datezone {
+  display: inline-flex;
+}
+
+.eachpicker {
+  padding: 10px;
+}
