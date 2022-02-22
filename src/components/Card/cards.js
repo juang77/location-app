@@ -3,6 +3,7 @@ import React  from 'react';
 import Card from './card';
 import './cards.css';
 import propTypes from 'prop-types';
+import Pajarraco from '../../assets/Pajarraco.jpg';
 
 function Cards({props}){
     const cards = props;
@@ -15,10 +16,10 @@ function Cards({props}){
                         <Card
                             id={card.id}
                             name={card.name}
-                            image={card.image}
+                            image={Pajarraco}
                             opentime={card.opentime}
                             closetime={card.closetime}
-                            alt={card.alt}
+                            alt='Pajarraco'
                         />
                         </div>
                     ))
