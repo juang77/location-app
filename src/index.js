@@ -13,6 +13,7 @@ import DAteFnsUtils from '@date-io/date-fns';
 import FullLocations from './routes/full-locations';
 import AvailableLocations from './routes/available-locations';
 
+
 const rootElement = document.getElementById("root");
 render(
 <MuiPickersUtilsProvider utils={DAteFnsUtils}>

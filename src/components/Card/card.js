@@ -10,8 +10,8 @@ function Card({id, name, image, opentime, closetime, alt}){
             </div>
             <div className='card-body text-light'>
                 <h4 className='card-title'>{name ? name : 'Location without Name' + id}</h4>
-                <p className='card-text text-secondary'>Hora de Apertura: {opentime}</p>
-                <p className='card-text text-secondary'>Hora de Cierre: {closetime}</p>
+                <p className='card-text text-secondary'>Open time: {opentime}</p>
+                <p className='card-text text-secondary'>Close Time: {closetime}</p>
             </div>    
         </div>
     )
