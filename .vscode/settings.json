@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/6cbc7fbe-79e9-48f7-953c-33233780e630/resourceGroups/LRGApi/providers/Microsoft.Web/sites/LocationReactApp",
+  "appService.deploySubpath": "."
+}

@@ -31,11 +31,13 @@ export default function AvailableLocations() {
   function fetchData() {
       setOnError(false);
       setDataLoad(false);
+      var startDate = selectedStartDate.getHours() + ':' + selectedStartDate.getMinutes();
+      var endDate = selectedFinalDate.getHours() + ':' + selectedFinalDate.getMinutes();
       fetch(Url,{
         mode:'cors',
         method: 'POST',
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({locationOpenTime:{selectedStartDate},locationCloseTime:{selectedFinalDate}})
+        body: JSON.stringify({locationOpenTime:startDate,locationCloseTime:endDate})
       })
       .then(res => res.json())
       .then(

@@ -8,15 +8,18 @@
 
 .card-body {
   padding: 2rem 1rem !important;
+  max-width: 12em !important;
 }
 
 .card-title {
   padding: 0.3rem 1rem !important;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .card-text {
   padding: 0.3rem 1rem !important;
+  font-size: 12px;
 }
 
 .overflow {
