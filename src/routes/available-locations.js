@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Cards from '../components/Card/cards';
 import { TimePicker } from "@material-ui/pickers";
+import { Spinner } from "reactstrap";
 
 import Pajarraco from '../assets/Pajarraco.jpg';
 import Nina from '../assets/Nina.jpg';
@@ -62,10 +63,21 @@ export default function AvailableLocations() {
         <br></br>
         <div className="datezone">
           <div className="col-md-3 eachpicker">
-            <label className="alllabels">Start Date:</label><TimePicker value={selectedStartDate} onChange={cambiarSelectedStartDate}/>
+            <label className="alllabels">Start Date:</label><TimePicker 
+                                                              clearable
+                                                              ampm={false}
+                                                              label="24 hours"
+                                                              value={selectedStartDate} 
+                                                              onChange={cambiarSelectedStartDate
+                                                              }/>
           </div>
           <div className="col-md-3 eachpicker">
-            <label className="alllabels">Final Date:</label><TimePicker value={selectedFinalDate} onChange={cambiarFinalStartDate}/>
+            <label className="alllabels">Final Date:</label><TimePicker 
+                                                              clearable
+                                                              ampm={false}
+                                                              label="24 hours"
+                                                              value={selectedFinalDate} 
+                                                              onChange={cambiarFinalStartDate}/>
           </div>
           <div className="col-md-3 eachpicker">
             <button  className="btn btn-primary" onClick={() => {fetchData(); setLoading(true)}}>Fetch</button >
@@ -74,11 +86,9 @@ export default function AvailableLocations() {
         <br></br>
         <br></br>
         {loading === false && <div></div>}
-        {loading && <div>Loading...</div>}
-        {onError && <div>Error: {error.message}</div>}
-        {DataLoad && onError===false && <div><Cards props = {cards}/> </div>}
-
-        
+        {loading && <div className='container d-flex justify-content-center h-100 cards-responses'><p className="messageResult"><Spinner/></p></div>}
+        {onError && <div className='container d-flex justify-content-center h-100 cards-responses'><p className="messageResult">Error: {error.message}</p></div>}
+        {DataLoad && onError===false && <Cards props = {cards}/>}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Cards from '../components/Card/cards';
+import { Spinner } from "reactstrap";
 
 import Pajarraco from '../assets/Pajarraco.jpg';
 import Nina from '../assets/Nina.jpg';
@@ -47,7 +48,8 @@ export default function FullLocations() {
                 <h2>Full Location Page</h2>
                 <br></br>
                 <br></br>
-                <div>Error: {error.message}</div>
+                {/* <div className='container d-flex justify-content-center h-100 cards-responses'><p className="messageResult">Error: {error.message}</p></div> */}
+                <Cards props = {cards}/> 
               </div>
             </div>
           );
@@ -59,7 +61,7 @@ export default function FullLocations() {
                 <h2>Full Location Page</h2>
                 <br></br>
                 <br></br>
-                <div>Loading...</div>
+                <div className='container d-flex justify-content-center h-100 cards-responses'><p className="messageResult"><Spinner color="secondary"/></p></div>
               </div>
             </div>
           );
