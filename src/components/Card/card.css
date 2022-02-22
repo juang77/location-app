@@ -8,7 +8,7 @@
 
 .card-body {
   padding: 2rem 1rem !important;
-  max-width: 12em !important;
+  flex: inherit !important;
 }
 
 .card-title {
