@@ -21,6 +21,14 @@
   }
 }
 
+@media screen and (max-width: 760px) {
+  .card {
+    height: 25rem;
+    max-width: 200px;
+    margin-left: 20% !important;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

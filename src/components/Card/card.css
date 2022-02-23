@@ -9,6 +9,7 @@
 
 .card-body {
   padding: 2rem 1rem !important;
+  min-width: 200px;
 }
 
 .card-title {
